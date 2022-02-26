@@ -23,7 +23,7 @@ main{
     max-width: 96vw;
     padding-left: 1em;
     padding-right: 1em;
-}
+ }
 
 /*#titleTop{
     align-self: flex-start;
@@ -75,8 +75,6 @@ p{
 }
 
 .aboutBox{
-    margin-top: 4em;
-    clear: both;
     min-width: 240px;
     max-width: 48vw;
     margin-left: 3.2em;
@@ -89,6 +87,14 @@ p{
 
 .right{
     float: right;
+}
+
+section{
+    padding-top: 2.4em;
+}
+
+section p{
+    padding: 5em;
 }
 
 .left{
