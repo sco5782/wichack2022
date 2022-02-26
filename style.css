@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+#constantTop{
+    margin: -0.5rem;
+    /*width: 100%;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(113,70,128);
+    padding:1rem;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#topLink{
+    padding: .9em;
+    color: inherit;
+    text-decoration: inherit;
+
+}
+
+main{
+    max-width: 96vw;
+    max-width: 96vw;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+/*#titleTop{
+    align-self: flex-start;
+}
+#topSkull{
+    align-self:flex-end;
+}
+    margin-left: 10%;
+    margin-right: 10%;
+*/
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-evenly;
+    padding-left: 0%;
+}
+
+ul li{
+    font-family: Helvetica, Arial, sans-serif;
+    margin:1rem;
+}
+
+header{
+    text-shadow: 0 0 3px #000000;
+    padding-left:0.5rem;
+    padding-top: 0.5rem;
+    font-weight:bold;
+    color:white;
+    font-size: 1.5rem;
+}
+
+#topSkull{
+    height:3rem;
+    width:3.2rem;
+}
+
+#myCanvas{
+    margin-left:5%;
+    margin-right:5%;
+}
+
+p{
+   line-height: 1.4em;
+   margin: .5em;
+   padding: .2em;
+}
+
+.aboutBox{
+    margin-top: 4em;
+    clear: both;
+    min-width: 240px;
+    max-width: 48vw;
+    margin-left: 3.2em;
+    margin-bottom: 2.4em;
+}
+
+.center{
+    text-align: center;
+}
+
+.right{
+    float: right;
+}
+
+.left{
+    float: left;
+}
+
+.line_length{
+    max-width: 72vw;
+}
