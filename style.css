@@ -34,3 +34,9 @@ ul li{
     font-family: Helvetica, Arial, sans-serif;
     margin:1rem;
 }
+
+header{
+    text-shadow: 0 0 3px #FFFFFF;
+    padding-left:0.5rem;
+    padding-top: 0.5rem;
+}
