@@ -4,7 +4,7 @@
  * 
  */
 
-import "../html/infoScreen.html"
+/*import "../html/infoScreen.html"
 
 function setup(){
     var canvas = document.getElementById("MyCanvas");
@@ -18,4 +18,8 @@ function moveTile(){
 
 function resetGame(){
 }
+*/
 
+function begin(){
+    document.getElementById("myGame").style.display = "block";
+}
