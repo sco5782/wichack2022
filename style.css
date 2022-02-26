@@ -3,15 +3,18 @@
 #constantTop{
     margin: 0%;
     width: 100%;
-    display:flex;
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(113,70,128);
 }
-#titleTop{
+
+/*#titleTop{
     align-self: flex-start;
 }
 #topSkull{
     align-self:flex-end;
-}
+}*/
 
 ul{
     list-style: none;
@@ -20,8 +23,10 @@ ul{
     margin-left: 10%;
     margin-right: 10%;
     width: 75%; 
+    justify-content: space-evenly;
 }
 
 ul li{
     font-family: Helvetica, Arial, sans-serif;
+    margin:1rem;
 }
