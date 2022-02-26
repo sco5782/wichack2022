@@ -104,3 +104,16 @@ section p{
 .line_length{
     max-width: 72vw;
 }
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.aboutUs{
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 300px;
+}
