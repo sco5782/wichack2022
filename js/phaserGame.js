@@ -20,7 +20,7 @@ var game = new Phaser.Game(config);
 
 function preload ()
 {
-    // this.load.setBaseURL('http://labs.phaser.io');
+    //this.load.setBaseURL('../');
 
     // this.load.image('sky', 'assets/skies/space3.png');
     // this.load.image('logo', 'assets/sprites/phaser3-logo.png');
