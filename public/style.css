@@ -117,3 +117,11 @@ section p{
     padding: 10px;
     height: 300px;
 }
+
+#div1 {
+    width: 5rem;
+    height: 5rem;
+    padding: 10px;
+    border: 0.3rem solid #b39700;
+    border-radius: 1rem;
+  }
