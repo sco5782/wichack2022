@@ -48,6 +48,44 @@
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 </style>
+</head>
+<body>
+
+<h2>Bargaining</h2>
+<div id="startSpace">
+	<button 	
+		class="startButton"
+		id="startbtn" 
+		onclick="start()"
+	>Start</button>
+</div>
+<p id="prompt">insert start prompt here</p>
+
+<div class="dropdown">
+  <button class="dropbtn">Choose Option</button>
+  <div class="dropdown-content"> <!-- when mouse hovers over btn options show-->
+    <a
+		id = c1 
+		onclick="addPoints('c1')"
+		href="#">Option 1
+	</a>
+
+    <a 
+		id = c2 
+		onclick="addPoints('c2')"
+		href="#">Option 2
+	</a>
+
+    <a 
+		id = c3 
+		onclick="addPoints('c3')"
+		href="#">Option 3
+	</a>
+
+	<!--canvas id="myCanvas" width="800rem" height="500rem"></canvas-->
+  </div>
+</div>
+
 <script>
 	const promptValues = [
 		[0, -1, 2], //point values for each promt

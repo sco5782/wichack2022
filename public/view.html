@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+                
+        .startButton{
+            background-color: #000;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+
+        .cs{
+            visibility: hidden;
+        }
+        .copeButton{
+            background-color: #000;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+
+        .tile1{
+            display: table-cell;
+            width: 120px;
+            height: 120px;
+
+            background: url(../../assets/logo_120x120.png);  
+            cursor: pointer;
+
+        }
+
+        .tile2{
+            display: table-cell;
+            width: 120px;
+            height: 120px;
+
+            background: url(../../assets/logo_120x120.png);  
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+
+        .tile3{
+            display: table-cell;
+            width: 120px;
+            height: 120px;
+
+            background: url(../../assets/logo_120x120.png);  
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+
+        .tile4{
+            display: table-cell;
+            width: 120px;
+            height: 120px;
+
+            background: url(../../assets/logo_120x120.png);  
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+
+        .tile5{
+            display: table-cell;
+            width: 120px;
+            height: 120px;
+
+            background: url(../../assets/logo_120x120.png);  
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+
+        .tile6{
+            display: table-cell;
+            width: 120px;
+            height: 120px;
+
+            background: url(../../assets/logo_120x120.png);  
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+
+        .tile7{
+            display: table-cell;
+            width: 120px;
+            height: 120px;
+
+            background: url(../../assets/logo_120x120.png);  
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+
+        .tile8{
+            display: table-cell;
+            width: 120px;
+            height: 120px;
+
+            background: url(../../assets/logo_120x120.png);  
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+
+        .tile9{
+            display: table-cell;
+            width: 120px;
+            height: 120px;
+
+            background-color: gray;  
+            cursor: pointer;
+        }
+    
+    </style>  
+</head>
+<body>
+
+    <h2>Anger</h2>
+    <div id="startSpace">
+        <button 	
+            class="startButton"
+            id="startbtn" 
+            onclick="start()"
+        >Start</button>
+
+        <p id="prompt">insert start prompt here</p>
+    </div>
+    
+
+    <div id="table" style="display: none;">
+        <div id="row1" style="display: table-row;">
+            <div id="cell11" class="tile1" onClick="clickTile(1,1);"></div>
+            <div id="cell12" class="tile2" onClick="clickTile(1,2);"></div>
+            <div id="cell13" class="tile3" onClick="clickTile(1,3);"></div>
+        </div>
+        <div id="row2" style="display: table-row;">
+            <div id="cell21" class="tile4" onClick="clickTile(2,1);"></div>
+            <div id="cell22" class="tile5" onClick="clickTile(2,2);
+                                                    burden();"></div>
+            <div id="cell23" class="tile6" onClick="clickTile(2,3);"></div>
+        </div>
+        <div id="row3" style="display: table-row;">
+            <div id="cell31" class="tile7" onClick="clickTile(3,1);"></div>
+            <div id="cell32" class="tile8" onClick="clickTile(3,2);"></div>
+            <div id="cell33" class="tile9" onClick="clickTile(3,3);"></div>
+        </div>
+    </div>
+
+    <div id="copeSpace" class="cs">
+        <p id="copingMessage">coping words</p>
+
+        <button 	
+            id="rtnbtn" 
+        >Return</button>
+
+    </div>
+    
+   <script>
+        var obstacleCount = 15;
+
+        function swapTiles(cell1, cell2){ //change to just images not the cell itself
+            var temp = document.getElementById(cell1).className;
+            document.getElementById(cell1).className = document.getElementById(cell2).className;
+            document.getElementById(cell2).className = temp;
+        }
+
+        function shuffle(){
+            for (var row = 1; row <= 3; row++){
+                for (var col = 1; col <= 3; col++){ 
+                    var r = Math.floor(Math.random() * 3 + 1); 
+                    var c = Math.floor(Math.random() * 3 + 1); 
+                    swapTiles("cell".concat(row).concat(col), "cell".concat(r).concat(c)); 
+                }
+            }
+        }
+
+        function burden(){
+            if(obstacleCount > 0){
+                shuffle();
+            } else if(obstacleCount == 0){
+                document.getElementById("table").style.display = "none";
+                document.getElementById("copeSpace").style.visibility = "visible";
+                document.getElementById("rtnbtn").onclick = function (){
+                    document.getElementById("copeSpace").style.visibility = "hidden";
+                    document.getElementById("table").style.display = "table";
+                }
+                //document.getElementById("copeSpace").style.display = "none";
+            } else {
+                return;
+            }
+            obstacleCount--;
+        }
+        
+        function start(){
+            document.getElementById("startbtn").style.visibility = "hidden";
+            document.getElementById("startSpace").style.display = "none";
+            document.getElementById("table").style.display = "table";
+            shuffle();
+	    }
+
+        function clickTile(row, col){
+
+            var cell = document.getElementById("cell" + row + col);
+            var tile = cell.className;
+            if (tile!="tile9") { 
+                if(col < 3){
+                    if ( document.getElementById("cell" + row + (col + 1)).className=="tile9"){
+                        swapTiles("cell"+ row + col,"cell"+ row + (col + 1));
+                        return;
+                    }
+                }
+            
+                if(col > 1){
+                    if(document.getElementById("cell" + row + (col - 1)).className=="tile9"){
+                        swapTiles("cell"+ row + col,"cell" + row + (col - 1));
+                        return;
+                    }
+                }
+                
+                if(row > 1){
+                    if(document.getElementById("cell" + (row - 1) + col).className=="tile9"){
+                        swapTiles("cell"+ row + col,"cell" + (row - 1) + col);
+                        return;
+                    }
+                }
+                
+                if(row < 3){
+                    if(document.getElementById("cell" + (row + 1) + col).className=="tile9"){
+                        swapTiles("cell"+ row + col,"cell" + (row + 1) + col);
+                        return;
+                    }
+                } 
+            }
+        }
+
+        /*function isSolved(){
+            for(i in Range(0,9)){
+                var title = 'title';
+                title.concat(i);
+                var imgA = new Image();
+                imgA.src = url(assets/logo_120x120.png); //expand to be based on title
+                var imgB = new Image();
+                imgB.src = document.getElementById(title).style.background;
+
+                if (imgA.getBase64 === b_base64)
+            }
+            return true;
+        }*/
+</script>
+</body>
+</html>
