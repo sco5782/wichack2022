@@ -20,19 +20,16 @@ var game = new Phaser.Game(config);
 
 function preload ()
 {
-    //this.load.setBaseURL('../');
-
-    // this.load.image('sky', 'assets/skies/space3.png');
-    // this.load.image('logo', 'assets/sprites/phaser3-logo.png');
-    // this.load.image('red', 'assets/particles/red.png');
+    this.load.image('bgtile', '../assets/blank_tile.png')
     this.load.image('tile', '../assets/tile.png');
-
+    
 }
 
 function create ()
 {
-    // this.add.image(400, 300, 'sky');
-    this.add.image(100, 100, 'tile');
+    bg_tiles = this.add.group({key: 'bgtile', repeat: 63, setScale: {x: 2, y:2 }});
+    var grid_x = (this.game.config.width / 2) - 200;
+    Phaser.Actions.GridAlign(bg_tiles.getChildren(), { width: 8, cellWidth: 64, cellHeight: 64, x: grid_x, y: 100 });
 
     // var particles = this.add.particles('red');
 
