@@ -1,12 +1,5 @@
 @charset "utf-8";
 
-<<<<<<< HEAD
-body{
-    background-color: rgb(249, 245, 255);
-}
-
-=======
->>>>>>> 3e544d22dde5683ea78699dc67988ffc1ae08635
 #constantTop{
     margin: -0.5rem;
     /*width: 100%;*/
@@ -18,8 +11,6 @@ body{
     font-family: Helvetica, Arial, sans-serif;
 }
 
-<<<<<<< HEAD
-=======
 #topLink{
     padding: .9em;
     color: inherit;
@@ -34,7 +25,6 @@ main{
     padding-right: 1em;
  }
 
->>>>>>> 3e544d22dde5683ea78699dc67988ffc1ae08635
 /*#titleTop{
     align-self: flex-start;
 }
@@ -60,11 +50,7 @@ ul li{
 }
 
 header{
-<<<<<<< HEAD
-    text-shadow: 0 0 1rem #000000;
-=======
     text-shadow: 0 0 3px #000000;
->>>>>>> 3e544d22dde5683ea78699dc67988ffc1ae08635
     padding-left:0.5rem;
     padding-top: 0.5rem;
     font-weight:bold;
@@ -77,20 +63,6 @@ header{
     width:3.2rem;
 }
 
-<<<<<<< HEAD
-#myGame{
-    margin-left:20%;
-    margin-right:20%;
-}
-
-#div1 {
-    width: 5rem;
-    height: 5rem;
-    padding: 10px;
-    border: 0.3rem solid #b39700;
-    border-radius: 1rem;
-  }
-=======
 #myCanvas{
     margin-left:5%;
     margin-right:5%;
@@ -145,4 +117,3 @@ section p{
     padding: 10px;
     height: 300px;
 }
->>>>>>> 3e544d22dde5683ea78699dc67988ffc1ae08635
