@@ -57,3 +57,11 @@ header{
     margin-left:20%;
     margin-right:20%;
 }
+
+#div1 {
+    width: 5rem;
+    height: 5rem;
+    padding: 10px;
+    border: 0.3rem solid #b39700;
+    border-radius: 1rem;
+  }
