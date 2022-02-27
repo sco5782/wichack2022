@@ -1,9 +1,5 @@
 @charset "utf-8";
 
-body{
-    background-color: rgb(249, 245, 255);
-}
-
 #constantTop{
     margin: -0.5rem;
     /*width: 100%;*/
@@ -14,6 +10,20 @@ body{
     padding:1rem;
     font-family: Helvetica, Arial, sans-serif;
 }
+
+#topLink{
+    padding: .9em;
+    color: inherit;
+    text-decoration: inherit;
+
+}
+
+main{
+    max-width: 96vw;
+    max-width: 96vw;
+    padding-left: 1em;
+    padding-right: 1em;
+ }
 
 /*#titleTop{
     align-self: flex-start;
@@ -40,7 +50,7 @@ ul li{
 }
 
 header{
-    text-shadow: 0 0 1rem #000000;
+    text-shadow: 0 0 3px #000000;
     padding-left:0.5rem;
     padding-top: 0.5rem;
     font-weight:bold;
@@ -53,15 +63,57 @@ header{
     width:3.2rem;
 }
 
-#myGame{
-    margin-left:20%;
-    margin-right:20%;
+#myCanvas{
+    margin-left:5%;
+    margin-right:5%;
 }
 
-#div1 {
-    width: 5rem;
-    height: 5rem;
-    padding: 10px;
-    border: 0.3rem solid #b39700;
-    border-radius: 1rem;
+p{
+   line-height: 1.4em;
+   margin: .5em;
+   padding: .2em;
+}
+
+.aboutBox{
+    min-width: 240px;
+    max-width: 48vw;
+    margin-left: 3.2em;
+    margin-bottom: 2.4em;
+}
+
+.center{
+    text-align: center;
+}
+
+.right{
+    float: right;
+}
+
+section{
+    padding-top: 2.4em;
+}
+
+section p{
+    padding: 5em;
+}
+
+.left{
+    float: left;
+}
+
+.line_length{
+    max-width: 72vw;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
   }
+
+.aboutUs{
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 300px;
+}
