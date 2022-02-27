@@ -87,7 +87,7 @@ function create ()
 
     good_tile.on("pointerdown", function(){
         console.log("clicked tile.");
-        var url = "../huh.html";
+        var url = "huh.html";
         var s = window.location.replace(url);
         if (s && s.focus)
         {
