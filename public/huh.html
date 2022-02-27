@@ -21,7 +21,7 @@
   padding: 16px;
   font-size: 16px;
   border: none;
-  visibility: hidden;
+  display: none;
 }
 
 .dropdown {
@@ -92,7 +92,7 @@
 	var promptNum;
 
 	function start() {
-		document.getElementsByClassName("dropbtn")[0].style.visibility = "visible";
+		document.getElementsByClassName("dropbtn")[0].style.display = "block";
 		document.getElementsByClassName("startButton")[0].style.display = "none";
 		document.getElementById("prompt").innerHTML = promptMessages[0];	
 		promptNum = 0;

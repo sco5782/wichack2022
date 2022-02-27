@@ -145,10 +145,15 @@
 
         <button 	
             id="rtnbtn" 
-        >Return</button>
+        >Okay</button>
 
     </div>
     
+    <div id="bargain" style="visibility:hidden">
+        <p id="bargainMessage">There's nothing left. The anger leaves you hollow. But maybe there was something you could have done.</p>
+        <button id="barbtn">Bargain</button>
+    </div>
+
    <script>
         var obstacleCount = 15;
 
@@ -177,6 +182,13 @@
                 document.getElementById("rtnbtn").onclick = function (){
                     document.getElementById("copeSpace").style.visibility = "hidden";
                     document.getElementById("table").style.display = "table";
+                    setTimeout(() => {
+                        //Make button appear
+                        document.getElementById("bargain").style.visibility = "visible";
+                        document.getElementById("barbtn").onclick = function (){
+                            window.location.replace("huh.html");
+                        }
+                    }, 10000)
                 }
             } else {
                 return;
