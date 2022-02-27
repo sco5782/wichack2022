@@ -58,7 +58,10 @@ header{
     margin-right:20%;
 }
 
-/* canvas{
-    margin-left:5%;
-    margin-right:5%;
-} */
+#div1 {
+    width: 5rem;
+    height: 5rem;
+    padding: 10px;
+    border: 0.3rem solid #b39700;
+    border-radius: 1rem;
+  }
