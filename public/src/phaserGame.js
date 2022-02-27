@@ -86,8 +86,9 @@ function create ()
     }, this);
 
     good_tile.on("pointerdown", function(){
-        //var url = ;
-        var s = window.open(url);
+        console.log("clicked tile.");
+        var url = "../huh.html";
+        var s = window.location.replace(url);
         if (s && s.focus)
         {
             s.focus();
