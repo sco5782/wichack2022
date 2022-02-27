@@ -2,6 +2,8 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel= "stylesheet" type="text/css" href="../style.css">
+			<link src="script" type="javascript" href="Mechanics.js">
 <style>
 
 .startButton{
@@ -46,44 +48,6 @@
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 </style>
-</head>
-<body>
-
-<h2>Bargaining</h2>
-<div id="startSpace">
-	<button 	
-		class="startButton"
-		id="startbtn" 
-		onclick="start()"
-	>Start</button>
-</div>
-<p id="prompt">insert start prompt here</p>
-
-<div class="dropdown">
-  <button class="dropbtn">Dropdown</button>
-  <div class="dropdown-content"> <!-- when mouse hovers over btn options show-->
-    <a
-		id = c1 
-		onclick="addPoints('c1')"
-		href="#">Option 1
-	</a>
-
-    <a 
-		id = c2 
-		onclick="addPoints('c2')"
-		href="#">Option 2
-	</a>
-
-    <a 
-		id = c3 
-		onclick="addPoints('c3')"
-		href="#">Option 3
-	</a>
-
-	<!--canvas id="myCanvas" width="800rem" height="500rem"></canvas-->
-  </div>
-</div>
-
 <script>
 	const promptValues = [
 		[0, -1, 2], //point values for each promt
@@ -92,12 +56,12 @@
 	];
 
 	const promptMessages = [
-		'You feel so horribly sluggish today, maybe if you lay in bed for another hour or two you will feel better.\n \
-		Your Mother just died has died you are in the proccess of greiving the relationship that once was.\n \
-		In this depressive bout you think...\n \
-			1.) If only I had talked to her more, maybe she would still be with me.\n \
-			2.) If only I had broken up  with her first, I wouldn\'t be this hurt if I ended this relationship.\n \
-			3.) If only I had communicated the problems I saw in our relationship, I could have done more\n ',
+		'You feel so horribly sluggish today, maybe if you lay in bed for another hour or two you will feel better.<br> \
+		Maybe getting up wouldn\'t be worth it.<br> \
+		In this depressive bout you think...<br> \
+			1.) If only I had talked to her more, maybe she would still be with me. <br> \
+			2.) If only I had broken up  with her first, I wouldn\'t be this hurt if I ended this relationship.<br> \
+			3.) If only I had communicated the problems I saw in our relationship, I could have done more<br> ',
 		'message2 \
 			choice1	\
 			choice2	\
@@ -149,6 +113,62 @@
 		prompt.innerHTML = message;
 	}
 </script>
+</head>
+<body>
+	<!DOCTYPE html>
+	<html lang="en">
+		<body>
+			<div id="constantTop">
+				<header>Learn to Live</header>
+				<img src="../assets/logo.png" alt="topSkull.jpg"> <!--not in there yet-->
+			</div>
+	
+			<div id="playAndAbout">
+				<ul>
+					<li><a onclick="begin()">Play</a></li> <!--FOR CLICKING TO BEGIN-->
+					<li><a href="../aboutMe.html">About</a></li>
+				</ul>
+			</div>
+			
+			<div id="gameBox">
+			<h2>Bargaining</h2>
+<div id="startSpace">
+	<button 	
+		class="startButton"
+		id="startbtn" 
+		onclick="start()"
+	>Start</button>
+</div>
+<p id="prompt">insert start prompt here</p>
+
+<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content"> <!-- when mouse hovers over btn options show-->
+    <a
+		id = c1 
+		onclick="addPoints('c1')"
+		href="#">Option 1
+	</a>
+
+    <a 
+		id = c2 
+		onclick="addPoints('c2')"
+		href="#">Option 2
+	</a>
+
+    <a 
+		id = c3 
+		onclick="addPoints('c3')"
+		href="#">Option 3
+	</a>
+
+	<!--canvas id="myCanvas" width="800rem" height="500rem"></canvas-->
+  </div>
+</div>	
+			</div>
+
+
+
 
 </body>
 </html>
