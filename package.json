@@ -1,0 +1,32 @@
+{
+  "name": "learn-to-live",
+  "version": "1.0.0",
+  "description": "a game made during WiC Hacks!",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack",
+    "dev": "webpack-dev-server",
+    "start": "http-server ./html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sco5782/wichack2022.git"
+  },
+  "keywords": [
+    "game"
+  ],
+  "author": "Flynn, Sofia, Mildness, Camren",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sco5782/wichack2022/issues"
+  },
+  "homepage": "https://github.com/sco5782/wichack2022#readme",
+  "devDependencies": {
+    "css-loader": "^6.6.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  },
+  "dependencies": {
+    "webpack": "^5.69.1"
+  }
+}
