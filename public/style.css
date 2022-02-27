@@ -68,6 +68,11 @@ header{
     margin-right:5%;
 }
 
+#myGame{
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
 p{
    line-height: 1.4em;
    margin: .5em;
