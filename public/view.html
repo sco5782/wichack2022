@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel= "stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
     <style>
                 
         .startButton{
@@ -103,8 +107,10 @@
         }
     
     </style>  
-</head>
-<body>
+    <div id="constantTop">
+        <header>Learn to Live</header>
+        <img src="../assets/logo.png" alt="topSkull.jpg" id="topSkull"> <!--not in there yet-->
+    </div>
 
     <h2>Anger</h2>
     <div id="startSpace">
@@ -138,14 +144,22 @@
     </div>
 
     <div id="copeSpace" class="cs">
-        <p id="copingMessage">coping words</p>
+        <p id="copingMessage">It's okay to feel frustrated, trapped, or hurt. Try to understand why you feel this way. Maybe there's resentment towards someone or a situation that was out of your control.
+            <br>Sometimes physical activity can offer relief- try sports, physical labor, or intense exercise. Creative outlets like art, music, or writing can also help you express this pain.
+            <br>Don't forget that you can reach out to others. You are not alone.
+        </p>
 
         <button 	
             id="rtnbtn" 
-        >Return</button>
+        >Okay</button>
 
     </div>
     
+    <div id="bargain" style="visibility:hidden">
+        <p id="bargainMessage">There's nothing left. The anger leaves you hollow. But maybe there was something you could have done.</p>
+        <button id="barbtn">Maybe..</button>
+    </div>
+
    <script>
         var obstacleCount = 15;
 
@@ -174,6 +188,13 @@
                 document.getElementById("rtnbtn").onclick = function (){
                     document.getElementById("copeSpace").style.visibility = "hidden";
                     document.getElementById("table").style.display = "table";
+                    setTimeout(() => {
+                        //Make button appear
+                        document.getElementById("bargain").style.visibility = "visible";
+                        document.getElementById("barbtn").onclick = function (){
+                            window.location.replace("huh.html");
+                        }
+                    }, 10000)
                 }
             } else {
                 return;
