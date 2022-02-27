@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <body id="body">
+        <div id="div" style="background-color:black;width:80%;height:25rem;padding:2rem;display:flex;flex-direction: column;">
+            <button onclick="changeToEnd()" style="padding:0.5rem;height:fit-content;align-self:flex-end;">Quit</button>
+        </div>
+    </body>
+
+    <script>
+        function changeToEnd(){
+            var url = "end.html"; //will be changed
+            var s = window.location.replace(url);
+            if (s && s.focus){
+                s.focus();
+            } else if (!s){
+                window.location.href = url;
+            }
+        }
+    </script>
+
+</head>
+</html>
